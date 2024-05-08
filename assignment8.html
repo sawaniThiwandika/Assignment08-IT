@@ -151,13 +151,13 @@
   }
   $("div").on("click", function(event) {
     event.stopPropagation();
-    clearInterval(myInterval);
+   /* clearInterval(myInterval);*/
     var index = $("div").index(this);
     letters[index]=SavedLetters[0];
     console.log("First  "+SavedLetters[0]);
     var i=index-1;
     console.log("Clicked div index:", index);
-    let j=0;
+    let j=1;
     for(i;i>=0;i--){
 
       letters[i]=SavedLetters[SavedLetters.length-j];
@@ -173,7 +173,7 @@
       j++;
     }
     timertoBlocks();
-    myInterval=setInterval(timertoBlocks,2000);
+    /*myInterval=setInterval(timertoBlocks,2000);*/
   });
 
 
